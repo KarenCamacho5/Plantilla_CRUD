@@ -1,0 +1,135 @@
+/* Contenedor principal */
+.container {
+    font-family: 'Roboto', sans-serif;
+    padding: 80px 48px 48px ;
+    background-color: #f8f9fa;
+  }
+
+  .header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinea a la izquierda */
+    margin-bottom: 24px; /* Espacio entre título y filtros */
+    width: 100%;
+  }
+  
+  .mat-title {
+    font-size: 2.5rem; /* Tamaño grande para el título */
+    font-weight: bold;
+    color: #000; /* Azul Material Design */
+    margin: 0; /* Elimina el margen por defecto */
+  }
+  
+  .description {
+    font-size: 1.1rem; /* Tamaño moderado */
+    color: #555; /* Color gris suave */
+    margin-top: 8px; /* Espacio pequeño debajo del título */
+    max-width: 600px; /* Limita el ancho del texto */
+    line-height: 1.6; /* Mejora la legibilidad */
+  }
+  
+  /* Filtros */
+  .filters {
+    display: flex;
+    gap: 16px; /* Espacio entre los elementos */
+    flex-wrap: wrap;
+  }
+  
+  /* Filtros: cada ítem ocupa el espacio necesario */
+  .filter-campaña, .filter-date, .filter-status{
+    display: flex;
+    width: 300px;
+    flex-direction: column; 
+    border-bottom: 2px solid #00BCD4;
+    font-size: 14px;
+  }
+  
+  /* Estilo de las etiquetas */
+  .filter-campaña label,
+    .filter-date label,
+    .filter-status label  {
+    font-weight: bold; 
+    margin-bottom: 4px; 
+    font-size: 14px; 
+    color: #333; 
+  }
+
+  .filter-campaña input,
+    .filter-date input,
+    .filter-status select {
+    padding: 8px 12px;
+  }
+
+  
+  .filters .primary-button {
+    background-color: #00BCD4;
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Tabla */
+  .tabla {
+    width: 100%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    border-collapse: collapse;
+  }
+  
+  .tabla th {
+    background-color: #00BCD4;
+    color: white;
+    text-align: center;
+    border: 2px solid #fff;
+  }
+  
+  .tabla td {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  
+  /* Footer */
+  .footer {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+
+  .button-group, .filter-buttons{
+    margin-left: auto; /* Empuja los botones hacia la derecha */
+    display: flex;
+    gap: 40px;
+  }
+
+  .primary-button{
+    width: 200px;
+    font-size: 20px;
+  }
+
+  .items-filters{
+    min-width: 48px; 
+    height: 50px;
+    padding: 0;
+    border-radius: 4px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: #fff;
+    background: #00BCD4;
+  }
+  
+
+  
+
+
+
+
+  
+  

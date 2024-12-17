@@ -1,0 +1,33 @@
+.formulario{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 2px;
+    border-bottom: 2px solid #00BCD4;
+    font-size: 14px;
+}
+
+.formulario label{
+font-weight: bold; 
+margin-bottom: 4px; 
+font-size: 14px; 
+color: #000000; 
+}
+
+.actions {
+    margin-bottom: 4px;
+    display: flex;
+    justify-content: flex-end; /* Alinea los botones a la derecha */
+    gap: 8px; /* Espacio entre los botones */
+    margin-top: 16px; /* Espacio superior opcional */
+  }
+  
+
+.botones_formulario{
+    background-color: #00BCD4;
+    color: #fff;
+    padding: -3px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
