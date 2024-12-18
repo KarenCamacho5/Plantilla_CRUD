@@ -45,15 +45,20 @@ export class PrincipalComponent implements OnInit {
     const filteredData = this.campaigns.filter((campaign) => {
       const matchesName = !this.filters.name || campaign.name.toLowerCase().includes(this.filters.name.toLowerCase());
       const matchesDate = !this.filters.createdAt || campaign.createdAt === this.filters.createdAt;
-    
-      
-      const matchesActive = this.filters.active === null || campaign.active === this.filters.active;
+  
+      // Convertir el filtro de active a booleano antes de comparar
+      const filterActive = this.filters.active === null || this.filters.active === '' 
+        ? null 
+        : this.filters.active === 'true';
+  
+      const matchesActive = filterActive === null || campaign.active === filterActive;
   
       return matchesName && matchesDate && matchesActive;
     });
   
     this.dataSource.data = filteredData;
   }
+  
   
   
 

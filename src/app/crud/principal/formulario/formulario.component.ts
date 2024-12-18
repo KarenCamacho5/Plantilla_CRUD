@@ -22,11 +22,11 @@ export class FormularioComponent  {
 
   save(): void {
     if (this.campaign.name && this.campaign.createdAt !== '' && this.campaign.active !== '') {
-      // Convertir el valor de 'active' a booleano
-      this.campaign.active = (this.campaign.active === 'true');
+      this.campaign.active = this.campaign.active === 'true'; // Convertir a booleano
       this.dialogRef.close(this.campaign);
     }
   }
+  
   
   
 }
