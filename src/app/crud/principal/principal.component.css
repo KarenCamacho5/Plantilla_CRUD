@@ -1,135 +1,132 @@
+
+
 /* Contenedor principal */
 .container {
-    font-family: 'Roboto', sans-serif;
-    padding: 80px 48px 48px ;
-    background-color: #f8f9fa;
-  }
+  font-family: 'Roboto', sans-serif; /* Fuente principal */
+  padding: 80px 48px 48px; /* Espaciado interno */
+  background-color: #f8f9fa; /* Fondo claro */
+}
 
-  .header{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Alinea a la izquierda */
-    margin-bottom: 24px; /* Espacio entre título y filtros */
-    width: 100%;
-  }
-  
-  .mat-title {
-    font-size: 2.5rem; /* Tamaño grande para el título */
-    font-weight: bold;
-    color: #000; /* Azul Material Design */
-    margin: 0; /* Elimina el margen por defecto */
-  }
-  
-  .description {
-    font-size: 1.1rem; /* Tamaño moderado */
-    color: #555; /* Color gris suave */
-    margin-top: 8px; /* Espacio pequeño debajo del título */
-    max-width: 600px; /* Limita el ancho del texto */
-    line-height: 1.6; /* Mejora la legibilidad */
-  }
-  
-  /* Filtros */
-  .filters {
-    display: flex;
-    gap: 16px; /* Espacio entre los elementos */
-    flex-wrap: wrap;
-  }
-  
-  /* Filtros: cada ítem ocupa el espacio necesario */
-  .filter-campaña, .filter-date, .filter-status{
-    display: flex;
-    width: 300px;
-    flex-direction: column; 
-    border-bottom: 2px solid #00BCD4;
-    font-size: 14px;
-  }
-  
-  /* Estilo de las etiquetas */
-  .filter-campaña label,
-    .filter-date label,
-    .filter-status label  {
-    font-weight: bold; 
-    margin-bottom: 4px; 
-    font-size: 14px; 
-    color: #333; 
-  }
+/* Sección del encabezado */
+.header {
+  display: flex;
+  flex-direction: column; /* Alineación vertical */
+  align-items: flex-start; /* Alineación a la izquierda */
+  margin-bottom: 24px; /* Separación del encabezado con el contenido siguiente */
+  width: 100%; /* Toma el ancho completo */
+}
 
-  .filter-campaña input,
-    .filter-date input,
-    .filter-status select {
-    padding: 8px 12px;
-  }
+.mat-title {
+  font-size: 2.5rem; /* Tamaño del título */
+  font-weight: bold; /* Negrita para destacar */
+  color: #000; /* Color negro */
+  margin: 0; /* Elimina márgenes predeterminados */
+}
 
-  
-  .filters .primary-button {
-    background-color: #00BCD4;
-    color: #fff;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  /* Tabla */
-  .tabla {
-    width: 100%;
-    margin-top: 60px;
-    margin-bottom: 60px;
-    border-collapse: collapse;
-  }
-  
-  .tabla th {
-    background-color: #00BCD4;
-    color: white;
-    text-align: center;
-    border: 2px solid #fff;
-  }
-  
-  .tabla td {
-    padding: 10px;
-    text-align: center;
-  }
-  
-  
-  /* Footer */
-  .footer {
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.9rem;
-    color: #666;
-  }
+.description {
+  font-size: 1.1rem; /* Tamaño moderado para el texto */
+  color: #555; /* Gris suave */
+  margin-top: 8px; /* Espacio pequeño debajo del título */
+  max-width: 600px; /* Ancho máximo para limitar la línea */
+  line-height: 1.6; /* Mejora la legibilidad */
+}
 
+/* Sección de filtros */
+.filters {
+  display: flex;
+  gap: 16px; /* Espacio entre filtros */
+  flex-wrap: wrap; /* Permite que los filtros se ajusten en varias líneas */
+}
 
-  .button-group, .filter-buttons{
-    margin-left: auto; /* Empuja los botones hacia la derecha */
-    display: flex;
-    gap: 40px;
-  }
+.filter-campaña,
+.filter-date,
+.filter-status {
+  display: flex;
+  width: 300px; /* Ancho fijo para cada filtro */
+  flex-direction: column; /* Alineación vertical */
+  border-bottom: 2px solid #00BCD4; /* Línea decorativa en la parte inferior */
+  font-size: 14px; /* Tamaño del texto */
+}
 
-  .primary-button{
-    width: 200px;
-    font-size: 20px;
-  }
+/* Estilo de las etiquetas en los filtros */
+.filter-campaña label,
+.filter-date label,
+.filter-status label {
+  font-weight: bold; /* Resalta las etiquetas */
+  margin-bottom: 4px; /* Espaciado debajo de la etiqueta */
+  font-size: 14px; /* Tamaño del texto */
+  color: #333; /* Color oscuro */
+}
 
-  .items-filters{
-    min-width: 48px; 
-    height: 50px;
-    padding: 0;
-    border-radius: 4px; 
-    display: flex; 
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    color: #fff;
-    background: #00BCD4;
-  }
-  
+/* Estilo para los inputs y select de los filtros */
+.filter-campaña input,
+.filter-date input,
+.filter-status select {
+  padding: 8px 12px; /* Espaciado interno */
+}
 
-  
+/* Botón principal de los filtros */
+.filters .primary-button {
+  background-color: #00BCD4; /* Azul Material Design */
+  color: #fff; /* Texto blanco */
+  padding: 8px 12px; /* Espaciado interno */
+  border: none; /* Sin bordes */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+}
 
+/* Sección de la tabla */
+.tabla {
+  width: 100%; /* Toma todo el ancho disponible */
+  margin-top: 60px; /* Espacio superior */
+  margin-bottom: 60px; /* Espacio inferior */
+  border-collapse: collapse; /* Combina bordes de celdas */
+}
 
+.tabla th {
+  background-color: #00BCD4; /* Fondo azul */
+  color: white; /* Texto blanco */
+  text-align: center; /* Alineación centrada */
+  border: 2px solid #fff; /* Bordes blancos */
+}
 
+.tabla td {
+  padding: 10px; /* Espaciado interno */
+  text-align: center; /* Alineación centrada */
+}
 
-  
-  
+/* Footer */
+.footer {
+  margin-top: 10px; /* Espacio superior */
+  display: flex; /* Diseño flexible */
+  justify-content: space-between; /* Elementos separados a los extremos */
+  font-size: 0.9rem; /* Tamaño pequeño */
+  color: #666; /* Gris tenue */
+}
+
+/* Grupo de botones */
+.button-group,
+.filter-buttons {
+  margin-left: auto; /* Alinea los botones a la derecha */
+  display: flex; /* Diseño flexible */
+  gap: 40px; /* Espaciado entre botones */
+}
+
+.primary-button {
+  width: 200px; /* Ancho fijo */
+  font-size: 20px; /* Texto más grande */
+}
+
+/* Botones para filtros */
+.items-filters {
+  min-width: 48px; /* Ancho mínimo */
+  height: 50px; /* Altura fija */
+  padding: 0; /* Sin relleno adicional */
+  border-radius: 4px; /* Bordes redondeados */
+  display: flex; /* Diseño flexible */
+  align-items: center; /* Centra contenido verticalmente */
+  justify-content: center; /* Centra contenido horizontalmente */
+  font-size: 16px; /* Tamaño del texto */
+  color: #fff; /* Texto blanco */
+  background: #00BCD4; /* Fondo azul */
+}

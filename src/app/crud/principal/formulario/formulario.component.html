@@ -1,53 +1,93 @@
+<!-- Título del cuadro de diálogo -->
 <div mat-dialog-title>
   <h1>{{ data ? 'Editar Campaña' : 'Nueva Campaña' }}</h1>
 </div>
 
+<!-- Contenido del cuadro de diálogo -->
 <div mat-dialog-content class="centered-dialog">
-  <!-- Formulario -->
+  <!-- Formulario para capturar/editar los datos de la campaña -->
   <form #campaignForm="ngForm">
-    <!-- Campo Nombre -->
+    <!-- Campo: Nombre -->
     <div class="row">
       <mat-form-field appearance="standard" class="formulario">
         <label>Nombre</label>
-        <input matInput [(ngModel)]="campaign.name" name="name" required />
-        <mat-error *ngIf="campaignForm.form.controls['name']?.invalid && campaignForm.form.controls['name']?.touched">
+        <input
+          matInput
+          [(ngModel)]="campaign.name"
+          name="name"
+          required
+        />
+        <!-- Mensaje de error si el campo está vacío -->
+        <mat-error
+          *ngIf="campaignForm.form.controls['name']?.invalid && campaignForm.form.controls['name']?.touched"
+        >
           El nombre es obligatorio.
         </mat-error>
       </mat-form-field>
     </div>
 
-    <!-- Campo Fecha de creación -->
+    <!-- Campo: Fecha de creación -->
     <div class="row">
       <mat-form-field appearance="standard" class="formulario">
         <label>Fecha de creación</label>
-        <input matInput type="date" [(ngModel)]="campaign.createdAt" name="createdAt" required />
-        <mat-error *ngIf="campaignForm.form.controls['createdAt']?.invalid && campaignForm.form.controls['createdAt']?.touched">
+        <input
+          matInput
+          type="date"
+          [(ngModel)]="campaign.createdAt"
+          name="createdAt"
+          required
+        />
+        <!-- Mensaje de error si el campo está vacío -->
+        <mat-error
+          *ngIf="campaignForm.form.controls['createdAt']?.invalid && campaignForm.form.controls['createdAt']?.touched"
+        >
           La fecha es obligatoria.
         </mat-error>
       </mat-form-field>
     </div>
 
-    <!-- Campo Estado -->
+    <!-- Campo: Estado -->
     <div class="row">
       <mat-form-field appearance="standard" class="formulario">
         <label>Estado</label>
-        <select matNativeControl [(ngModel)]="campaign.active" name="estado" required>
+        <select
+          matNativeControl
+          [(ngModel)]="campaign.active"
+          name="estado"
+          required
+        >
           <option value="">--Seleccionar--</option>
           <option value="true">Activo</option>
           <option value="false">Inactivo</option>
         </select>
-        <mat-error *ngIf="campaignForm.form.controls['estado']?.invalid && campaignForm.form.controls['estado']?.touched">
+        <!-- Mensaje de error si el campo está vacío -->
+        <mat-error
+          *ngIf="campaignForm.form.controls['estado']?.invalid && campaignForm.form.controls['estado']?.touched"
+        >
           El estado es obligatorio.
         </mat-error>
       </mat-form-field>
     </div>
 
-    <!-- Botones de Acción -->
+    <!-- Botones de acción -->
     <div class="row actions">
       <div mat-dialog-actions>
-        <button mat-button class="botones_formulario" (click)="onNoClick()">Cancelar</button>
-        <button mat-raised-button color="primary" class="botones_formulario"
-                (click)="save()" [disabled]="!campaignForm.form.valid">
+        <!-- Botón para cancelar -->
+        <button
+          mat-button
+          class="botones_formulario"
+          (click)="onNoClick()"
+        >
+          Cancelar
+        </button>
+        <!-- Botón para guardar -->
+        <button
+          mat-raised-button
+          color="primary"
+          class="botones_formulario"
+          (click)="save()"
+          [disabled]="!campaignForm.form.valid"
+        >
           Guardar
         </button>
       </div>

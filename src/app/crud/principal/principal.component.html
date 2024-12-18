@@ -12,22 +12,23 @@
 
   <!-- Filtros -->
   <div class="filters">
+    <!-- Filtro por nombre de campaña -->
     <div class="filter-campaña">
       <mat-form-field appearance="standard" class="filter-item">
         <label>Campaña</label>
-        <input matInput type="text" [(ngModel)]="filters.name"
-        (ngModelChange)="applyFilters()"/>
+        <input matInput type="text" [(ngModel)]="filters.name" (ngModelChange)="applyFilters()"/>
       </mat-form-field>
     </div>
   
+    <!-- Filtro por fecha de creación -->
     <div class="filter-date">
       <mat-form-field appearance="standard" class="filter-item">
         <label>Fecha de creación</label>
-        <input matInput type="date" [(ngModel)]="filters.createdAt"
-        (ngModelChange)="applyFilters()" />
+        <input matInput type="date" [(ngModel)]="filters.createdAt" (ngModelChange)="applyFilters()" />
       </mat-form-field>
     </div>
   
+    <!-- Filtro por estado -->
     <div class="filter-status">
       <mat-form-field appearance="standard" class="filter-item">
         <label>Estado</label>
@@ -36,11 +37,10 @@
           <option value="true">Activo</option>
           <option value="false">Inactivo</option>
         </select>
-        
       </mat-form-field>
     </div>
 
-    <!-- Botones -->
+    <!-- Botones de acción -->
     <div class="button-group">
       <button mat-icon-button color="primary" (click)="applyFilters()" class="items-filters" aria-label="Buscar">
         <mat-icon>search</mat-icon>
@@ -49,13 +49,11 @@
         <mat-icon>refresh</mat-icon>
       </button>
       <button mat-raised-button color="primary" class="primary-button" (click)="openDialog()">Crear Campaña</button>
-
     </div>
   </div>
 
   <!-- Tabla de campañas -->
   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tabla">
-
     <!-- Columna: Nombre -->
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef> Nombre </th>
@@ -98,6 +96,6 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
   </table>
 
-  
+  <!-- Paginador -->
   <mat-paginator [pageSize]="5" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
 </div>

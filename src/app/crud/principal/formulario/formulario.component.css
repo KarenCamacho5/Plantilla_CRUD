@@ -1,33 +1,41 @@
-.formulario{
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 2px;
-    border-bottom: 2px solid #00BCD4;
-    font-size: 14px;
+.formulario {
+    width: 100%; /* Asegura que el campo ocupe todo el ancho disponible */
+    margin-bottom: 10px; /* Espacio inferior entre los campos */
+    padding: 2px; /* Espaciado interno del campo */
+    border-bottom: 2px solid #00BCD4; /* Línea inferior con color primario */
+    font-size: 14px; /* Tamaño de fuente para los campos */
 }
 
-.formulario label{
-font-weight: bold; 
-margin-bottom: 4px; 
-font-size: 14px; 
-color: #000000; 
+/* Estilo para las etiquetas de los campos del formulario */
+.formulario label {
+    font-weight: bold; /* Texto en negrita */
+    margin-bottom: 4px; /* Espacio inferior */
+    font-size: 14px; /* Tamaño de fuente de la etiqueta */
+    color: #000000; /* Color del texto */
 }
 
+/* Contenedor para los botones de acción */
 .actions {
-    margin-bottom: 4px;
-    display: flex;
-    justify-content: flex-end; /* Alinea los botones a la derecha */
+    margin-bottom: 4px; /* Espacio inferior opcional */
+    display: flex; /* Uso de flexbox para alinear los botones */
+    justify-content: flex-end; /* Alinea los botones al extremo derecho */
     gap: 8px; /* Espacio entre los botones */
     margin-top: 16px; /* Espacio superior opcional */
-  }
-  
-
-.botones_formulario{
-    background-color: #00BCD4;
-    color: #fff;
-    padding: -3px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
-  
+
+/* Estilo para los botones del formulario */
+.botones_formulario {
+    background-color: #00BCD4; /* Color de fondo principal */
+    color: #fff; /* Color del texto */
+    padding: 6px 12px; /* Espaciado interno para un tamaño adecuado */
+    border: none; /* Sin bordes visibles */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Efecto suave para hover */
+}
+
+/* Efecto hover para los botones */
+.botones_formulario:hover {
+    background-color: #0097A7; /* Color más oscuro al pasar el cursor */
+}
+
